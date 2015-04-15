@@ -1,0 +1,23 @@
+{
+  "name": "easel",
+  "version": "0.0.0",
+  "homepage": "http://nathanrosspowell.github.io/easel",
+  "authors": [
+    "Nathan Ross Powell <nathanrosspowell@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "EaselJS"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
