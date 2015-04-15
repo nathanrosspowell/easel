@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <title>EaselJS Demo</title>
     <link rel="stylesheet" href="css/theme.css">
+    <script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+    <script>
+        if (!createjs) { 
+            document.write('<script src="easeljs/lib/easeljs-0.8.0.min.js"><\/script>');
+        }
+    </script>
 </head>
 
 <body>
     <canvas id="demoCanvas" width="500" height="300"></canvas>
-    <script src="easeljs/lib/easeljs-0.8.0.min.js"></script>
-    <script src="js/init.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
