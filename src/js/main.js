@@ -1,5 +1,4 @@
 window.onload = function init() {
-    console.log("DERP");
     var stage = new createjs.Stage("demoCanvas");    
     var circle = new createjs.Shape();
     circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
