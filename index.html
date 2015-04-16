@@ -6,9 +6,15 @@
     <title>EaselJS Demo</title>
     <link rel="stylesheet" href="css/theme.css">
     <script src="https://code.createjs.com/easeljs-0.8.0.min.js"></script>
+    <script src="https://code.createjs.com/preloadjs-0.6.0.min.js"></script>
     <script>
-        if (!createjs) { 
+        if (typeof createjs === 'undefined' || typeof createjs.EaselJS === 'undefined' ) { 
+            console.log("Using local EaselJS");
             document.write('<script src="easeljs/lib/easeljs-0.8.0.min.js"><\/script>');
+        }
+        if (typeof createjs === 'undefined' || typeof createjs.PreloadJS === 'undefined' ) { 
+            console.log("Using local PreloadJS");
+            document.write('<script src="preloadjs/dist/preload.min.js"><\/script>');
         }
     </script>
 </head>
