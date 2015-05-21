@@ -1,7 +1,9 @@
+var stage, circle;
+
 window.onload = function init() {
     // Test draw a circle
-    var stage = new createjs.Stage("demoCanvas");    
-    var circle = new createjs.Shape();
+    stage = new createjs.Stage("demoCanvas");    
+    circle = new createjs.Shape();
     circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
     circle.x = 100;
     circle.y = 100;
@@ -14,6 +16,7 @@ window.onload = function init() {
     // Handle input
     circle.addEventListener("click", handleClick);
     circle.addEventListener("mousedown", handlePress);
+    this.document.onkeydown = keyPressed;	 
 }
 
 function handleFileComplete(event) {
@@ -35,4 +38,26 @@ function handlePress(event) {
 function handleMove(event) {
      // Check out the DragAndDrop example in GitHub for more
     console.log('move');
+}
+
+function keyPressed(event) {
+	var KEYCODE_LEFT = 37, 
+		KEYCODE_RIGHT = 39,
+		KEYCODE_UP = 38, 
+		KEYCODE_DOWN = 40;
+    switch(event.keyCode) {
+        case KEYCODE_LEFT:	
+            circle.x -= 5;
+            break;
+        case KEYCODE_RIGHT: 
+            circle.x += 5; 
+            break;
+        case KEYCODE_UP: 
+            circle.y -= 5;
+            break;
+        case KEYCODE_DOWN: 
+            circle.y += 5;
+            break;
+    }
+    stage.update();
 }
